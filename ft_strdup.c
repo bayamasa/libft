@@ -2,9 +2,9 @@
 
 char	*ft_strdup(const char *src)
 {
-	int		i;
-	int		len;
-	char	*dest;
+	size_t		i;
+	size_t		len;
+	char		*dest;
 
 	len = 0;
 	i = 0;
@@ -20,4 +20,9 @@ char	*ft_strdup(const char *src)
 	}
 	dest[i] = '\0';
 	return (dest);
+}
+
+int main()
+{
+	
 }

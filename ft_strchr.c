@@ -2,9 +2,9 @@
 
 char	*ft_strchr(const char *s, int c)
 {
-	int		i;
-	char	*str;
-	char	chr;
+	size_t		i;
+	char		*str;
+	char		chr;
 
 	i = 0;
 	str = (char *)s;

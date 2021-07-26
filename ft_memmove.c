@@ -4,9 +4,7 @@ void	*ft_memmove(void *buf1, const void *buf2, size_t n)
 {
 	unsigned char	*dest;
 	unsigned char	*src;
-	unsigned int	i;
 
-	i = 0;
 	dest = (unsigned char *)buf1;
 	src = (unsigned char *)buf2;
 	if (dest == NULL && src == NULL)

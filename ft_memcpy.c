@@ -4,7 +4,7 @@ void	*ft_memcpy(void *buf1, const void *buf2, size_t n)
 {
 	unsigned char	*dest;
 	unsigned char	*src;
-	int				i;
+	size_t			i;
 
 	if (n == 0 || buf1 == buf2)
 		return (buf1);
