@@ -1,5 +1,4 @@
 #include "libft.h"
-#include <stdio.h>
 
 static int	ft_isspace(char a)
 {
@@ -18,11 +17,13 @@ static int	process_flow(int sign)
 	return (-1);
 }
 
+#include <stdio.h>
+
 int	ft_atoi(const char *str)
 {
-	long	num;
-	int		i;
-	int		sign;
+	size_t		i;
+	long		num;
+	int			sign;
 
 	num = 0;
 	i = 0;
@@ -45,11 +46,4 @@ int	ft_atoi(const char *str)
 		i++;
 	}
 	return ((int)(num * sign));
-}
-
-int	main()
-{
-	printf("%d\n", ft_atoi("9223372036854775809"));
-	printf("%d\n", atoi("9223372036854775809"));
-	return (0);
 }

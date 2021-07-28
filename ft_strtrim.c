@@ -1,9 +1,9 @@
 #include "libft.h"
 
-static int	get_trim_start_point(char const *str, char const *set)
+static size_t	get_trim_start_point(char const *str, char const *set)
 {
-	int	i;
-	int	start;
+	size_t	i;
+	size_t	start;
 
 	i = 0;
 	start = 0;
@@ -20,10 +20,10 @@ static int	get_trim_start_point(char const *str, char const *set)
 	return (start);
 }
 
-static int	get_trim_end_point(char const *str, char const *set)
+static size_t	get_trim_end_point(char const *str, char const *set)
 {
-	int	i;
-	int	end;
+	size_t	i;
+	size_t	end;
 
 	i = 0;
 	end = ft_strlen(str);
@@ -42,9 +42,9 @@ static int	get_trim_end_point(char const *str, char const *set)
 
 char	*ft_strtrim(char const *str, char const *set)
 {
-	int		start;
-	int		end;
-	char	*new_str;
+	size_t		start;
+	size_t		end;
+	char		*new_str;
 
 	if (str == NULL)
 		return (NULL);

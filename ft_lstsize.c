@@ -16,18 +16,3 @@ int	ft_lstsize(t_list *lst)
 	}
 	return (i);
 }
-void			lstiter_f(void *content) {
-	char *s = content;
-
-	s[0] = 'O';
-	s[1] = 'K';
-}
-
-// #include <stdio.h>
-
-// int	main()
-// {
-// 	t_list	*lst = ft_lstnew(ft_strdup("KO !"));
-	
-// 	return (0);
-// }

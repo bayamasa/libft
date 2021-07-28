@@ -1,8 +1,8 @@
 #include "libft.h"
 
-static int	nblen(long nb)
+static size_t	nblen(long nb)
 {
-	int		len;
+	size_t		len;
 
 	len = 0;
 	if (nb == 0)
@@ -33,7 +33,7 @@ char	*ft_itoa(int nb)
 {
 	char	*str;
 	long	n;
-	int		i;
+	size_t	i;
 
 	n = nb;
 	i = nblen(n);

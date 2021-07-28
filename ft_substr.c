@@ -2,11 +2,9 @@
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	unsigned int	i;
 	char			*str;
 	size_t			size;
 
-	i = 0;
 	if (s == NULL)
 		return (NULL);
 	size = ft_strlen(s);

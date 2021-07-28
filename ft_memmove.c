@@ -16,5 +16,5 @@ void	*ft_memmove(void *buf1, const void *buf2, size_t n)
 		while (n--)
 			*(dest + n) = *(src + n);
 	}
-	return (dest);
+	return (buf1);
 }

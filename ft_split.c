@@ -2,7 +2,7 @@
 
 static char	**free_all_strs(char **result)
 {
-	unsigned int	i;
+	size_t	i;
 
 	i = 0;
 	while (result[i] != NULL)
@@ -14,11 +14,11 @@ static char	**free_all_strs(char **result)
 	return (NULL);
 }
 
-static int	calc_array_size(char const *str, char c)
+static size_t	calc_array_size(char const *str, char c)
 {
-	int	size;
-	int	state;
-	int	i;
+	size_t	size;
+	int		state;
+	size_t	i;
 
 	i = 0;
 	size = 0;
@@ -39,11 +39,11 @@ static int	calc_array_size(char const *str, char c)
 	return (size);
 }
 
-static int	calc_start_point(char const *str, char sep, int start)
+static size_t	calc_start_point(char const *str, char sep, size_t start)
 {
-	int	size;
-	int	state;
-	int	i;
+	size_t	size;
+	int		state;
+	size_t	i;
 
 	i = 0;
 	size = 0;
@@ -66,14 +66,12 @@ static int	calc_start_point(char const *str, char sep, int start)
 	return (i);
 }
 
-static char	*get_str(char const *str, char sep, int skipcount)
+static char	*get_str(char const *str, char sep, size_t skipcount)
 {
 	char	*new_str;
-	int		state;
-	int		start;
-	int		len;
+	size_t	start;
+	size_t	len;
 
-	state = 0;
 	len = 0;
 	start = calc_start_point(str, sep, skipcount);
 	while (str[start + len] != sep && str[start + len] != '\0')
@@ -88,8 +86,8 @@ static char	*get_str(char const *str, char sep, int skipcount)
 char	**ft_split(char const *str, char sep)
 {
 	char	**result;
-	int		size;
-	int		i;
+	size_t	size;
+	size_t	i;
 
 	i = 0;
 	if (str == NULL)
