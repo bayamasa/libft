@@ -2,17 +2,19 @@
 
 void	ft_putendl_fd(char *s, int fd)
 {
-	size_t		i;
-	char		lf;
+	size_t	len;
+	size_t	i;
 
-	i = 0;
-	lf = '\n';
 	if (!s)
 		return ;
-	while (s[i] != '\0')
+	i = 0;
+	len = ft_strlen(s);
+	while (len > STR_BUFF_SIZE)
 	{
-		write(fd, &s[i], 1);
-		i++;
+		write(fd, s + i, STR_BUFF_SIZE);
+		i = i + STR_BUFF_SIZE;
+		len = len - STR_BUFF_SIZE;
 	}
-	write(fd, &lf, 1);
+	write(fd, s + i, len);
+	write(fd, "\n", 1);
 }

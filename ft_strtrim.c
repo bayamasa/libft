@@ -7,7 +7,7 @@ static size_t	get_trim_start_point(char const *str, char const *set)
 
 	i = 0;
 	start = 0;
-	while (set[i] != '\0')
+	while (set[i] != '\0' && str[start] != '\0')
 	{
 		if (str[start] == set[i])
 		{

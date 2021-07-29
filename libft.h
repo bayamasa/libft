@@ -11,6 +11,8 @@ typedef struct s_list
 	struct s_list	*next;
 }	t_list;
 
+# define STR_BUFF_SIZE 1000000
+
 int		ft_atoi(const char *str);
 void	ft_bzero(void *s, size_t n);
 void	*ft_calloc(size_t count, size_t size);

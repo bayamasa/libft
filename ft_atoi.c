@@ -8,16 +8,14 @@ static int	ft_isspace(char a)
 	return (0);
 }
 
-static int	process_flow(int sign)
+static long	process_flow(int sign)
 {
 	if (sign == -1)
 	{
-		return (0);
+		return (LONG_MIN);
 	}
-	return (-1);
+	return (LONG_MAX);
 }
-
-#include <stdio.h>
 
 int	ft_atoi(const char *str)
 {
@@ -41,7 +39,7 @@ int	ft_atoi(const char *str)
 	while (str[i] >= '0' && str[i] <= '9')
 	{
 		if ((num * 10 + (str[i] - '0')) / 10 != num)
-			return (process_flow(sign));
+			return ((int)process_flow(sign));
 		num = (num * 10) + (str[i] - '0');
 		i++;
 	}

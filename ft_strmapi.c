@@ -3,19 +3,19 @@
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
 	char		*str;
-	size_t		index;
+	size_t		i;
 
 	if (!s || !f)
 		return (NULL);
 	str = (char *)malloc(sizeof(char) * (ft_strlen(s) + 1));
-	if (str == 0)
+	if (str == NULL)
 		return (NULL);
-	index = 0;
-	while (s[index])
+	i = 0;
+	while (s[i])
 	{
-		str[index] = f(index, s[index]);
-		++index;
+		str[i] = f(i, s[i]);
+		i++;
 	}
-	str[index] = '\0';
+	str[i] = '\0';
 	return (str);
 }
