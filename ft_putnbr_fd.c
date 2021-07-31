@@ -2,21 +2,21 @@
 
 void	ft_putnbr_fd(int nb, int fd)
 {
-	long	b;
+	long	num;
 
-	b = nb;
+	num = nb;
 	if (nb < 0)
 	{
 		ft_putchar_fd('-', fd);
-		b = b * -1;
+		num = num * -1;
 	}
-	if (b >= 10)
+	if (num >= 10)
 	{
-		ft_putnbr_fd(b / 10, fd);
-		b = b % 10;
+		ft_putnbr_fd(num / 10, fd);
+		num = num % 10;
 	}
-	if (b < 10)
+	if (num < 10)
 	{
-		ft_putchar_fd('0' + b, fd);
+		ft_putchar_fd('0' + num, fd);
 	}
 }
